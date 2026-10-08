@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Simulados e Avaliações Técnicas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="header-top">
+      <button id="btn-back-menu" class="btn-back" style="display: none;" onclick="goToMainMenu()">
+        ← Voltar ao Menu Principal
+      </button>
+      <span id="header-tag" class="exam-badge badge-blue" style="display: none;">Simulado</span>
+    </div>
+    <h1 id="app-title">Portal de Simulados</h1>
+    <p id="app-subtitle" class="header-subtitle">Selecione uma avaliação para praticar com correção imediata e gabarito comentado.</p>
+  </header>
+
+  <!-- TELA 1: MENU PRINCIPAL -->
+  <main id="menu-screen">
+    <div class="menu-grid" id="menu-grid">
+      <!-- Os cards das provas são gerados dinamicamente pelo index.js -->
+    </div>
+  </main>
+
+  <!-- TELA 2: PROVA / QUIZ SELECIONADO -->
+  <main id="quiz-screen" style="display: none;">
+    <div class="score-banner">
+      <div class="banner-item">
+        <span>Progresso: <strong id="progress">0/0</strong></span>
+      </div>
+      <div class="banner-item">
+        <span>Pontuação: <strong id="score">0</strong> / <span id="max-score">0</span> pts</span>
+      </div>
+    </div>
+
+    <div id="quiz-container"></div>
+  </main>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
